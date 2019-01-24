@@ -1,0 +1,14 @@
+{
+    "name": "ikuzo/kirbypluginseo",
+    "description": "Kirby 3 SEO plugin",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Ikuzo",
+            "email": "contact@ikuzo.fr"
+        }
+    ],
+    "autoload": {
+        "files": ["config.php"]
+    }
+}

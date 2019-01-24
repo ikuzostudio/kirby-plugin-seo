@@ -1,0 +1,87 @@
+
+label: SEO
+icon: search
+
+columns:
+  - width: 1/3
+    fields:
+      seoMetaHeadline:
+        label:
+          en: Meta
+          fr: Meta
+        type: headline
+        numbered: false
+
+      seoMetaTitle:
+        label:
+          en: Title
+          fr: Titre
+        type: text
+        help:
+          en: Leave empty to use page title
+          fr: Laisser vide pour utiliser le titre de la page
+
+      seoMetaDescription:
+        label:
+          en: Description
+          fr: Description
+        type: textarea
+        buttons: false
+
+  - width: 1/3
+      fields:
+        seoOgHeadline:
+          label:
+            en: Social share
+            fr: Réseaux sociaux
+          type: headline
+          numbered: false
+
+        seoOgTitle:
+          label:
+            en: Title
+            fr: Titre
+          type: text
+          help:
+            en: Leave empty to use meta title
+            fr: Laisser vide pour utiliser le titre meta
+
+        seoOgDescription:
+          label:
+            en: Description
+            fr: Description
+          type: textarea
+          buttons: false
+          help:
+            en: Leave empty to use meta description
+            fr: Laisser vide pour utiliser la description meta
+
+        seoOgImage:
+          label:
+            en: Image
+            fr: Image
+          type: files
+          multiple: false
+
+  - width: 1/3
+      fields:
+
+        seoAdvancedHeadline:
+          label:
+            en: Advanced
+            fr: Avancé
+          type: headline
+          numbered: false
+
+        seoAdvancedHidden:
+          label:
+            en: Prevent search engines to index this page
+            fr: Empêcher les moteurs de recherche d'indexer cette page
+          type: toggle
+
+        seoAdvancedCanonical:
+          label:
+            en: Canonical URL
+            fr: URL canonique
+          type: text
+
