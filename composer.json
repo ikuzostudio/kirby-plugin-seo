@@ -3,7 +3,7 @@
     "description": "Kirby 3 SEO plugin",
     "type": "kirby-plugin",
     "license": "MIT",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "authors": [
         {
             "name": "Ikuzo",
@@ -14,7 +14,7 @@
         "getkirby/composer-installer": "^1.1"
     },
     "extra": {
-        "installer-name": "annotator"
+        "installer-name": "seo"
     },
     "keywords": [
         "kirby3",
