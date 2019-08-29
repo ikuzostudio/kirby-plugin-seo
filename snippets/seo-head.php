@@ -1,11 +1,11 @@
 <?php
 // get params from snippet if defined
 $title = isset($title) ?
-    option('ikuzo.seo.meta.title.prefix') . $title . option('ikuzo.seo.meta.title.suffix')
+    option('ikuzo.seo.meta.title.prefix')() . $title . option('ikuzo.seo.meta.title.suffix')()
     : $page->getSeoTitle();
 $description = isset($description) ? $description : $page->getSeoDescription();
 $ogTitle = isset($ogTitle) ?
-    option('ikuzo.seo.og.title.prefix') . $ogTitle . option('ikuzo.seo.og.title.suffix')
+    option('ikuzo.seo.og.title.prefix')() . $ogTitle . option('ikuzo.seo.og.title.suffix')()
     : $page->getSeoOgTitle();
 $ogDesc = isset($ogDesc) ? $ogDesc : $page->getSeoOgDescription();
 $ogImage = isset($ogImage) ? $ogImage : $page->getSeoOgImage();

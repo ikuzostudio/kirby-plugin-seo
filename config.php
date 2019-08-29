@@ -3,10 +3,21 @@ $kirby = kirby();
 
 Kirby::plugin('ikuzo/seo', [
     'options'     => [
-        'meta.title.prefix' => '',
-        'meta.title.suffix' => ' | ' . $kirby->site()->title(),
-        'og.title.prefix'   => '',
-        'og.title.suffix'   => ' | ' . $kirby->site()->title()
+        'meta.title.prefix' => function():String {
+			return '';
+        },
+        'meta.title.suffix' => function():String {
+			return ' | ' . kirby()->site()->title()->toString();
+        },
+        'og.title.prefix'   => function():String {
+	        return '';
+        },
+        'og.title.suffix' => function():String {
+	        return ' | ' . kirby()->site()->title()->toString();
+        },
+	    'og.image.default'  => function():String {
+		    return '';
+	    }
     ],
     'blueprints'  => [
         'tabs/seo' => __DIR__ . '/blueprints/seo.yml'
@@ -25,8 +36,7 @@ Kirby::plugin('ikuzo/seo', [
             if ($this->seoMetaTitle()->isNotEmpty()) {
                 $title = $this->seoMetaTitle()->html();
             }
-
-            return option('ikuzo.seo.meta.title.prefix') . $title . option('ikuzo.seo.meta.title.suffix');
+            return option('ikuzo.seo.meta.title.prefix')() . $title . option('ikuzo.seo.meta.title.suffix')();
         },
         /**
          * get SEO desctiption
@@ -48,7 +58,7 @@ Kirby::plugin('ikuzo/seo', [
                 $title = $this->seoMetaTitle()->html();
             }
 
-            return option('ikuzo.seo.og.title.prefix') . $title . option('ikuzo.seo.og.title.suffix');
+            return option('ikuzo.seo.og.title.prefix')() . $title . option('ikuzo.seo.og.title.suffix')();
         },
         /**
          * get SEO og desctiption
@@ -68,7 +78,7 @@ Kirby::plugin('ikuzo/seo', [
          * @return string
          */
         'getSeoOgImage' => function () {
-            return $this->seoOgImage()->isNotEmpty() ? $this->seoOgImage()->toFile()->url() : '';
+            return $this->seoOgImage()->isNotEmpty() ? $this->seoOgImage()->toFile()->url() : option('ikuzo.seo.og.image.default')();
         },
         /**
          * get SEO noindex
