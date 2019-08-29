@@ -2,6 +2,7 @@
     "name": "ikuzo/kirbypluginseo",
     "description": "Kirby 3 SEO plugin",
     "type": "kirby-plugin",
+    "license": "MIT",
     "version": "1.0.0",
     "authors": [
         {
