@@ -10,6 +10,12 @@
             "email": "contact@ikuzo.fr"
         }
     ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    },
+    "extra": {
+        "installer-name": "annotator"
+    },
     "keywords": [
         "kirby3",
         "kirby3-seo",
