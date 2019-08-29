@@ -20,8 +20,5 @@
         "kirby3",
         "kirby3-seo",
         "seo"
-    ],
-    "autoload": {
-        "files": ["config.php"]
-    }
+    ]
 }
