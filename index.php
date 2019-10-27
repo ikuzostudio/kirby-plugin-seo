@@ -1,7 +1,5 @@
 <?php
 
-@require_once __DIR__ . '/vendor/autoload.php';
-
 Kirby::plugin('ikuzo/seo', [
     'options'     => [
         'meta.title.prefix' => function():String {
